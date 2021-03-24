@@ -2,40 +2,40 @@
 
 struct student1{
     char lastName;
-    int studentId;             //ÀÌ ÇüÅÂ·Î ±¸Á¶Ã¼¸¦ ¸¸µé¸é ¼±¾ğÇÒ¶§ struct¸¦ ºÙ¿© ½á¾ßÇÑ´Ù.
+    int studentId;             //ì´ í˜•íƒœë¡œ êµ¬ì¡°ì²´ë¥¼ ë§Œë“¤ë©´ ì„ ì–¸í• ë•Œ structë¥¼ ë¶™ì—¬ ì¨ì•¼í•œë‹¤.
     char grade;
 };
 
 typedef struct{
     char lastName;
-    int studentId;           //int charÃ³·³ student2¸¸ ¾²¸é µÈ´Ù.
+    int studentId;           //int charì²˜ëŸ¼ student2ë§Œ ì“°ë©´ ëœë‹¤.
     char grade;
 } student2;
 
 int main(void){
 
     struct student1 st1 = {'A',100,'A'};
-    printf("[------[2017068005]--[°­´ö±Ô]--------]\n");
+    printf("[------[2017068005]--[ê°•ë•ê·œ]--------]\n");
 
     printf("st1.lastNAme = %c\n",st1.lastName);
-    printf("st1.studentId = %c\n",st1.studentId);           //ÇÒ´çÇÑ °ªÀ» Ãâ·ÂÇÏ´Â ¹æ¹ı.
+    printf("st1.studentId = %d\n",st1.studentId);           //í• ë‹¹í•œ ê°’ì„ ì¶œë ¥í•˜ëŠ” ë°©ë²•.
     printf("st1.grade = %c\n",st1.grade);
 
     student2 st2 = {'B',200,'B'};
 
     printf("\nst2.lastNAme = %c\n",st2.lastName);
-    printf("st2.studentId = %c\n",st2.studentId);        //³ÖÀº°ª È®ÀÎ
+    printf("st2.studentId = %d\n",st2.studentId);        //ë„£ì€ê°’ í™•ì¸
     printf("st2.grade = %c\n",st2.grade);
 
     student2 st3;
     st3 = st2;
 
     printf("\nst3.lastNAme = %c\n",st3.lastName);
-    printf("st3.studentId = %c\n",st3.studentId);       //°°Àº ±¸Á¶Ã¼¸¦ =¿¬»êÇÏ¸é °°Àº °ªÀ» °¡¸®Å²´Ù.
+    printf("st3.studentId = %d\n",st3.studentId);       //ê°™ì€ êµ¬ì¡°ì²´ë¥¼ =ì—°ì‚°í•˜ë©´ ê°™ì€ ê°’ì„ ê°€ë¦¬í‚¨ë‹¤.
     printf("st3.grade = %c\n",st3.grade);
 
     /*
-    if(st3 == st2) printf("equal\n");              //±¸Á¶Ã¼´Â ºñ±³¿¬»êÀ» ÇÒ ¼ö ¾ø´Ù.
+    if(st3 == st2) printf("equal\n");              //êµ¬ì¡°ì²´ëŠ” ë¹„êµì—°ì‚°ì„ í•  ìˆ˜ ì—†ë‹¤.
     else printf("not equal\n");
     */
 
